@@ -1,0 +1,282 @@
+<!--主な制作期間２月１５日〜２月１９日
+実装した機能やレイアウトなど
+BootStrapなし、マルチカラム、スプリットスクリーン、写真メインのデザイン、トップのヘッダータブに背景動画を使用、webフォントの使用、パララックス、サイドバー、タブ、スムーズスクロール、
+スライドショー、Masonryの使用、Jsonデータの使用、ホバー時のスライド＆ボタン・背景のズーム（オリエントスターの公式サイトを参考）、動画の埋め込み、アイコン、効果音の使用、
+レスポンシブWebデザイン（iphone6/7/8 plus、ランドスケープモード）
+)
+-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Oranienbaum" rel="stylesheet">
+        <link rel="stylesheet" href="css/watch.css">
+        <link rel="stylesheet" href="css/rwd.css">
+        <title>WATCH</title>
+    </head>
+    <body>
+        <div class="container">
+            <!--サイドバー-->
+            <aside class="side">
+                <ul>
+                    <li><a class="side-button" id="btn1" href=""><img class="side-img" src="img/side1.jpg" alt=""></a></li>
+                    <li><a class="side-button" id="btn2" href=""><img class="side-img"src="img/side2.jpg" alt=""></a></li>
+                    <li><a class="side-button" id="btn3" href=""><img class="side-img"src="img/side3.jpg" alt=""></a></li>
+                    <li><a class="side-button" id="btn4" href=""><img class="side-img"src="img/side4.jpg" alt=""></a></li>
+                    <li><a class="side-button" id="btn5" href=""><img class="side-img"src="img/side5.jpg" alt=""></a></li>
+                </ul>
+                <button><img src="img/btn_open.png" alt=""></button>
+            </aside>
+            <!--ヘッダータブ-->
+            <header class="header" id="header">
+                <div class="headerSectionTab">
+                    <div class="inner  clearfix">
+                        <h1 class="site-heading"><span class="title-color title-font">M</span>echanical <span class="title-color title-font">W</span>atches</h2>
+                        <ul class="tabs-nav clearfix">
+                            <li class="tab-li active-tab" id="tab-li1"><a href="#h1" class="tab-a" id="tab1">Tourbillon</a></li>
+                            <li class="tab-li" id="tab-li2"><a href="#h2" class="tab-a" id="tab2">Chronograph</a></li>
+                            <li class="tab-li" id="tab-li3"><a href="#h3" class="tab-a" id="tab3">Minute Repeater</a></li>
+                            <li class="tab-li" id="tab-li4"><a href="#h4" class="tab-a" id="tab4">Moon Phase</a></li>
+                            <li class="tab-li" id="tab-li5"><a href="#h5" class="tab-a" id="tab5">WatchMakers</a></li>
+                        </ul>
+                        <span class="tabs-highlight"></span>
+                    </div>
+                </div>
+                <div class="headerSectionBody">
+                    <div class="hwrapper">
+                        <section class="tabs-panel activeh" id="h1">
+                            <div class="tabs-inner">
+                                <div class="tabs-inner-description tabs-inner-description1">
+                                    <h2 class="header-heading header-heading1">Tourbillon</h2>
+                                </div>
+                                <div class="bg-movie rwd-hidden" id="bg-movie1"></div>
+                                <button class="tab-btn" id="tab-btn1">CHECK</button>
+                                <div class="cover rwd-hidden"></div>
+                            </div>
+                        </div>
+                        </section>
+                        <section class="tabs-panel" id="h2">
+                            <div class="tabs-inner">
+                                <div class="tabs-inner-description tabs-inner-description2">
+                                    <h2 class="header-heading">Chronograph</h2>
+                                </div>
+                                <div  class="headerimg headerimg2" ></div>
+                                <button class="tab-btn" id="tab-btn2">CHECK</button>
+                            </div>
+                        </section>
+                        <section class="tabs-panel" id="h3">
+                            <div class="tabs-inner">
+                                <div class="tabs-inner-description tabs-inner-description3">
+                                    <h2 class="header-heading">Minute Repeater</h2>
+                                </div>
+                                <div  class="headerimg headerimg3" ></div>
+                                <button class="tab-btn tab-btn3" id="tab-btn3">CHECK</button>
+                            </div>
+                        </section>
+                        <section class="tabs-panel" id="h4">
+                            <div class="tabs-inner">
+                                <div class="tabs-inner-description tabs-inner-description4">
+                                    <h2 class="header-heading">Moon Phase</h2>
+                                </div>
+                                <div  class="headerimg headerimg4" ></div>
+                                <button class="tab-btn" id="tab-btn4">CHECK</button>
+                            </div>
+                        </section>
+                        <section class="tabs-panel" id="h5">
+                            <div class="tabs-inner">
+                                <div class="tabs-inner-description tabs-inner-description5">
+                                    <h2 class="header-heading">Japanese WatchMakers</h2>
+                                </div>
+                                <div  class="headerimg headerimg5" ></div>
+                                <button class="tab-btn tab-btn5" id="tab-btn5">CHECK</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </header>
+            <!--トゥールビヨン-->
+            <section class="s1" id="s1">
+                <div class="tourbillon-wrapper">
+                    <div class="s1-description">
+                        <h1>Tourbillon</h1>
+                        <p>トゥールビヨンとは、1800年頃に、天才時計技師アブラアム・ルイ・ブレゲ氏によって、発明された複雑機構です。
+                                姿勢差によって、誤差が変化するという機械式腕時計の弱点を克服するために、機械自体を回転させる事によって、姿勢を平準化しています。<br>
+                                非常に複雑な機構であるため、20世紀後半には、世界でも製作出来る職人は10人に満たないとまで言われ、
+                                ミニッツ・リピーター、永久カレンダーとともに、腕時計の三大機構として並び称されています。<span class="rwd-hidden"><br>
+                                その他の２つ、ミニッツリピーター、パーペチュアルカレンダーが、時計機能に追加して作られる機能であることに対し、<br>
+                                トゥールビヨンは時計機能の基本構造自体を改良しており、発想のユニークさは群を抜いています。</p></span>
+                    </div>
+                    <div class="slideshow">
+                        <div class="slideshow-slides">
+                            <div class="slide">
+                                <img src="img/s1.jpg" alt="" width="100%" height="600px">
+                            </div>
+                            <div class="slide">
+                                <img src="img/s2.jpg" alt="" width="100%" height="600px">
+                            </div>
+                            <div class="slide">
+                                <img src="img/s3.jpg" alt="" width="100%" height="600px">
+                            </div>
+                            <div class="slide">
+                                <img src="img/s4.jpg" alt="" width="100%" height="600px">
+                            </div>
+                            <div class="slide">
+                                <img src="img/s5.jpg" alt="" width="100%" height="600px">
+                            </div>
+                        </div>
+                        <div class="slideshow-nav">
+                            <a class="prev" href="#"><img class="left" src="img/right.jpg" alt=""></a>
+                            <a class="next" href="#"><img class="right" src="img/right.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--クロノグラフ-->
+            <section class="s2 clearfix" id="s2">
+                <h1>Chronograph</h1>
+                <div class="s2-description-wrapper">
+                        <p class="s2-description">
+                                クロノグラフは「特定の経過時間を計測するための機構」です。<br>
+                                <p class="margin"></p>
+                                日本人に馴染みのある呼び方をすれば、ストップウォッチ機能といえます。<br>
+                                <p class="margin"></p>
+                                時間を計れる実用性に加え、文字盤の配列が機械的で秀逸なデザインが多いのがポイント。<br>
+                                <p class="margin"></p>
+                                機械式腕時計の中でもトップクラスの人気を誇っています。
+                        </p>
+                </div>
+                <ul class="gallery rwd-hidden" id="gallery"></ul>
+            </section>
+
+            <!--ミニッツリピーター-->
+            <section class="s3 clearfix" id="s3">
+                <div class="s3-left-wrapper">
+                    <div class="s3-left">
+                    </div>
+                    <div class="s3-description">
+                        <h1>Minute Repeater</h1>
+                        <p>ミニッツリピーター(Minute Repeater)は、鐘（音）を鳴らすことで現在時刻を知らせる機構のことです。<br>
+                            現代のデジタル時計に搭載されているバックライト機能や、スーパールミノバのような蓄光塗料が開発されるはるか昔、暗闇で時計の時刻を確認する方法は存在しませんでした。<br>
+                            ミニッツリピーターは、多くのパーツと極めて高度な技術力が必要です。
+                        </p>
+                     </div>
+                     <button class="sound-btn sound-btn1" id="sound-btn1"></button>
+                     <!--効果音-->
+                     <audio class="sound1" id="sound1" preload="auto">
+                        <source src="sound/sound.wav" type="audio/wav">
+                        <p>※お使いのブラウザでは音は鳴りません。</p>
+                    </audio>
+                    <audio class="sound2" id="sound2" preload="auto">
+                            <source src="sound/sound3.wav" type="audio/wav">
+                            <p>※お使いのブラウザでは音は鳴りません。</p>
+                    </audio>
+                    <audio class="sound3" id="sound3" preload="auto">
+                        <source src="sound/sound3.wav" type="audio/wav">
+                        <p>※お使いのブラウザでは音は鳴りません。</p>
+                    </audio>
+                </div>
+                <div class="s3-right-wrapper">
+                    <div class="s3-top-wrapper">
+                        <div class="s3-top"></div>
+                        <button class="sound-btn sound-btn2" id="sound-btn2"></button>
+                    </div>
+                    <div class="s3-bottom-wrapper">
+                        <div class="s3-bottom"></div>
+                        <button class="sound-btn sound-btn3" id="sound-btn3"></button>
+                    </div>
+                </div> 
+            </section>
+            <!--ムーンフェイズ-->
+            <section class="s4 clearfix" id="s4">
+                <div class="box-wrapper1">
+                    <h1>Moon Phase</h1>
+                    <div class="box box1">
+                        <p class="moon-p1">MECHANICHAL MOON PHASE</p>
+                        <p>オリエントスター初の機械式月齢時計</p>
+                        <button class="moon-more">MORE<span class="moon-more-ride"><span>MORE</span></span></button>
+                    </div>
+                </div>
+                <div class="box-wrapper2">
+                        <div class="embed-responsive embed-responsive-16by9 rwd-hidden">
+                            <iframe class="movie" width="560" height="315" src="https://www.youtube.com/embed/evzLBgbxrFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                </div>
+                <div class="box-wrapper3">
+                    <div class="box box3">
+                        <p>見る者のこころを、一瞬で奪う時計がある。
+                            オリエントスター初の機械式月齢時計、「メカニカルムーンフェイズ」誕生。
+                            <span class="rwd-hidden">分目盛のすぐ近くまで届くよう、熟練した職人の手で一本一本丁寧に曲げた分針。
+                            あらゆる角度から視認性を高めた両球面サファイアガラス。
+                            そしてセミスケルトンからのぞく、日差＋15秒～－5秒という高精度を誇るムーブメント。
+                            伝統の精密技術がついにたどり着いた、機能美という芸術。</span>
+                            この実用的にして上質なもうひとつの宇宙で、満ちていくのは、月か、あなたか。
+                            メイド・イン・ヒューマン。
+                        </p>
+                        <button class="moon-more">MORE<span class="moon-more-ride"><span>MORE</span></span></button>
+                    </div>
+                </div>
+            </section>
+
+            <!--独立時計師-->
+            <section class="s5" id="s5">
+                <div class="s5-left">
+                    <div class="s5-description">
+                        <h1>Japanese WatchMakers</h1>
+                        <div class="s5-description-left">
+                            <p> <span class="rwd-hidden">人間に与えられる最も公平な資源は時間です。<br>
+                                    1日24時間、生きている限り与えられるものですが、それは有限なものです。<br>
+                                    これは、過去も今も未来も変わらない、全く公平な真理です。<br>
+                                    人間が1日に出来る仕事量には限界があり、その生涯の中でしか、<br>
+                                    その技術を研鑽し発揮することは出来ません。<br>
+                                    過去の時計師が限りある時間をかけて真摯に作り上げた時計は<br>
+                                    時代を超えて現代に生き続け、彼らの情熱を私に伝えてくれます。<br>
+                                    「2つの手を動かして時計を作る」ことで、過去の時計師も、<br>
+                                    今の時計師も未来の時計師も同じ「時」を感じることが出来ます。<br></span>
+                                    私は限られた人生の時間の中、過去の時計師と同じように手を動かし、頭を捻り、<br>
+                                    彼らと同じ道具を使うことで同じ土俵に立ち、彼らを驚かせるような時計を作りたいのです。<br>
+                                    そしてその時計はあなたの手を経て、未来の時計師へのメッセージとなるでしょう。  <br>
+                                                                                                                                菊野昌宏</p>
+                        </div>
+                        <i><img class="icon zoom icon-active" src="img/zoom.png" alt=""></i>
+                        <i><img class="icon zoomout" src="img/zoomout.png" alt=""></i>
+                    </div>
+                </div>
+                <div class="s5-right">
+                    <div class="s5-description">
+                        <div class="s5-description-right">
+                            <p>
+                                <span class="rwd-hidden">1965年神奈川県生まれ。
+                                東京藝術大学美術学部デザイン科卒業後、浅岡肇デザイン事務所を設立。<br>
+                                プロダクトデザイナーとしての傍ら、現在ほどコンピューターグラフィックスの技術が浸透していなかった時代に.<br>
+                                いち早く3DCGなど先端の技術を身につけ、広告や雑誌の世界でも活躍。<br>
+                                腕時計のデザインをした仕事をきっかけに、独学で腕時計を作りを始め、<br></span>
+                                2009年に日本で初めて高難度のトゥールビヨン機構を搭載した高級機械式腕時計を発表。<br>
+                                その強烈な独自性を放つ時計は世界中から注目される。現在も時計製作の全工程をゼロから手掛ける独立時計師として活躍中。<br>
+                                世界で数十人の独立時計師から構成された国際的な組織、独立時計師アカデミー（AHCI）の正会員でもある。
+                            </p>
+                        </div>
+                        <i><img class="icon zoom icon-active" src="img/zoom.png" alt=""></i>
+                        <i><img class="icon zoomout" src="img/zoomout.png" alt=""></i>
+                    </div>
+                </div>
+            </section>
+            <!--フッター-->
+            <footer class="footer">
+                <p>©️Watch Maker</p>
+            </footer>
+        </div>  
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.tubular.1.0.js"></script>
+        <script src="js/jquery.typoshadow.js"></script>
+        <script src="js/watch.js"></script>
+        <noscript>JavaScriptが利用できません。</noscript>
+    </body>
+</html>

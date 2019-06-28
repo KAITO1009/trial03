@@ -1,0 +1,615 @@
+@charset "UTF-8";
+
+html {
+    font-size:62.5%;
+}
+*,*::before, *::after{
+    box-sizing:border-box;
+}
+body{
+    font-size:1.4rem;
+    font-family:'Oranienbaum',serif ,sans-serif;
+}
+
+/*サイドバー*/
+.side{
+    background-color: rgba(0,0,0,0.8);
+    width:200px;
+    height: 100%;
+    top:0;
+    left:-200px;
+    z-index: 300;
+    position: fixed;
+}
+.side  ul{
+    margin:0;
+    padding:0;
+    top:50px;
+    left:60px;
+    position: absolute;
+}
+.side li{
+    margin:0 0 20px;
+    list-style: none;
+}
+.side button{
+    background-color: rgba(0,0,0,0.8);
+    display: block;
+    position: absolute;
+    top: 75%;
+    left:200px;
+    width: 50px;
+    height: 130px;
+    margin:0;
+    padding: 0;
+    border: none;
+}
+.side-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top:10px;
+    transition: all 0.5s;
+}
+.side-img:hover{
+    transform:rotate(360deg);
+}
+
+/*ヘッダー*/
+.header {
+    width:100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.headerSectionTab{
+    width:100%;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    height: 90px;
+}
+.headerSectionBody{
+    width:100%;
+    height:500px;
+    position:relative;
+}
+/*タブボタン*/
+.site-heading{
+    float:left;
+    font-size:4rem;
+    padding-left:2%;
+    width:30%;
+    height: 100%;
+}
+.title-color{
+    color:rgb(176,151,097);
+}
+.title-font{
+    font-size:5rem;
+}
+.tabs-nav{
+    margin:0 auto;
+    float:right;
+    width:70%;
+    height:90px;
+}
+.tabs-nav li{
+    float:left;
+    list-style: none;
+    height: 100%;
+    width:20%;
+    border-right:1px solid rgba(0,0,0,0.1);
+    display:block;
+    font-size:1.8rem;
+}
+.tabs-nav li:nth-child(5){
+    border-right: none;
+}
+.tab-a{
+    text-decoration: none;
+    color:#333;
+    text-align: center;
+    line-height: 90px;
+    display: block;
+}
+.tab-a:hover{
+    opacity:0.6;
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*タブコンテンツ*/
+.hwrapper{
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.tabs-panel{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    display:none;
+}
+.tabs-inner{
+    position:relative;
+    height: 100%;
+    width:100%;
+}
+.tabs-inner-description{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    color:#fff;
+}
+.bg-movie{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.header-heading{
+    font-weight: bold;
+    font-size:6rem;
+    padding-left:50px;
+    letter-spacing: 2rem;
+}
+.tab-btn{
+    position: absolute;
+    top:220px;
+    left:200px;
+    z-index: 100;
+    width:150px;
+    height: 50px;
+    color:#fff;
+    background-color: #000;
+    border: 1px #fff solid;
+    transition:all 0.7s;
+}
+.tab-btn:hover{
+    opacity: 0.6;
+}
+.tab-btn3{
+    top:100px;
+    left:74%;
+}
+.tab-btn5{
+    left:45%;
+}
+
+
+/*ヘッダー画像*/
+.headerimg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.headerimg2{
+    background:url('../img/chrono1.jpg') no-repeat;
+    background-size:cover; 
+    background-position: center;
+}
+.headerimg3{
+    background:url('../img/minute1.jpg') no-repeat;
+    background-size:cover; 
+   
+}
+.headerimg4{
+    background:url('../img/moon1.jpg') no-repeat;
+    background-size:cover; 
+    background-position: center;
+}
+.headerimg5{
+    background:url('../img/maker1.jpg') no-repeat;
+    background-size:cover; 
+    background-position: center;
+}
+
+
+
+/*アクティブ状態*/
+.activeh{
+    display:block;
+}
+.active-tab{
+    background-color:rgba(0,0,0,0.3);
+}
+.active-tab a{
+    color: #fff;
+}
+.tab-li{
+    transition:all 0.5s
+}
+
+/*セクション1*/
+.s1{
+    height: 600px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.tourbillon-wrapper{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+/*トゥールビヨン・説明*/
+.s1-description{
+    position: absolute;
+    top:0;
+    left:0;
+    width:80%;
+    height:45%;
+    z-index: 10;
+    color:#fff;
+    background-color:rgba(0,0,0,0.6);
+    padding-left:2rem;
+    padding-right:2rem;
+}
+.s1-description h1{
+    font-size: 5rem;
+}
+/*スライドショー*/
+.slideshow{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.slideshow-slides{
+    height:100%;
+    width: 100%;
+    position:absolute;
+}
+.slideshow-slides .slide {
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    position:absolute;
+}
+.slideshow-slides .slide img{
+    position:absolute;
+}
+
+/*スライドショーナビゲーション*/
+.slideshow-nav a .left ,.slideshow-nav a .right{
+    z-index: 50;
+}
+.slideshow-nav a .left{
+    position:absolute;
+    top:50%;
+    left:5%;
+    width:60px;
+    height:100px;
+    transform:rotate(180deg)
+}
+.slideshow-nav a .right{
+    position:absolute;
+    top:50%;
+    right:5%;
+    width:60px;
+    height:100px;
+}
+
+/*セクション２*/
+/*ギャラリー*/
+.s2{
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+.s2-description-wrapper{
+    width:30%;
+    height:30%;
+    position:absolute;
+    top:75%;
+    left:65%;
+    font-size:1.5rem;
+}
+.margin{
+    margin:20px;
+}
+.s2 h1{
+    font-size: 5rem;
+    padding-left:40px;
+}
+.gallery{
+    margin:0;
+    padding:0;
+}
+.gallery-item{
+    list-style: none;
+    margin-top:10px;
+}
+.gallery-item.is-loading{
+    opacity:0;
+}
+
+/*セクション３*/
+.s3{
+    margin-top:160px;
+    width:100%;
+    height: 600px;
+    overflow: hidden;
+}
+.s3-left-wrapper{
+    width:50%;
+    height:100%;
+    float:left;
+    overflow: hidden;
+    position: relative;
+}
+.s3-right-wrapper{
+    width:50%;
+    height:100%;
+    float:right;
+    overflow: hidden;
+}
+.s3-top-wrapper {
+    width:100%;
+    height:50%;
+    overflow: hidden;
+    transition:all 1s;
+    position: relative;
+}
+.s3-bottom-wrapper{
+    width:100%;
+    height:50%;
+    overflow: hidden;
+    transition:all 1s;
+    position: relative;
+}
+.s3-left{
+    width:100%;
+    height:100%;
+    background:url('../img/m1.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+    transition:all 1s;
+}
+.s3-top{
+    width:100%;
+    height:100%;
+    background:url('../img/m2.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+    transition:all 1s;
+}
+.s3-bottom{
+    width:100%;
+    height:100%;
+    background:url('../img/m3.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+    transition:all 1s;
+}
+.s3-description{
+    color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:35%;
+    background-color: rgba(0,0,0,0.3);
+    padding-left:20px;
+}
+.s3-description h1{
+    font-size: 5rem;
+}
+.sound-btn{
+    position:absolute;
+    bottom:10%;
+    right:10%;
+    width:80px;
+    height:80px;
+    color:#fff;
+    background-color: #000;
+    background: url('../img/sound.jpg') no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.sound-btn:hover{
+    opacity: 0.8;
+}
+/*セクション４*/
+.s4{
+    width:100%;
+    height:600px;
+}
+.box-wrapper1{
+    width:50%;
+    height:50%;
+    float:left;
+    position: relative;
+    overflow: hidden;
+}
+.box-wrapper2{
+    width: 50%;
+    height: 100%;
+    float:right;
+}
+.box-wrapper3{
+    width:50%;
+    height:50%;
+    float:left;
+    position: relative;
+    overflow: hidden;
+}
+.box-wrapper1{
+    background: url('../img/p1.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.box-wrapper3{
+    background:url('../img/p2.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.box-wrapper2{
+    width: 50%;
+    height: 100%;
+    float:right;
+    background: #fff url('../img/p3.jpg');
+    background-size:cover;
+    background-position: center;
+}
+.movie{
+    margin-left:10%;
+    margin-top:20%;
+}
+.box{
+    position: absolute;
+    top:100%;
+    left:0;
+    background-color: rgba(0,0,0,0.8);
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:#fff;
+    padding-left:30px;
+    padding-top:80px;
+}
+.box-wrapper1 h1{
+    font-size:5rem;
+    color:#fff;
+    padding-left:30px;
+}
+.moon-p1{
+    font-size: 3rem;
+}
+.moon-more{
+    display: block;
+    top:0;
+    left:30%;
+    height: 40px;
+    line-height: 40px;
+    width:200px;
+    border:#fff solid 1px;
+    color:#fff;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+.moon-more-ride{
+    color:#000;
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height: 100%;
+}
+.moon-more-ride span{
+    display:block;
+    height: 40px;
+    line-height: 40px;
+    width:200px;
+}
+
+/*セクション５*/
+.s5{
+    width:100%;
+    height:600px;
+    overflow: hidden;
+    position: relative;
+}
+.s5-left{
+    width:50%;
+    height: 100%;
+    background: #333 url('../img/l.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.s5-right{
+    width:50%;
+    height: 100%;
+    background:url('../img/r.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:50%;
+}
+.s5-description{
+    padding-left:4rem;
+    color:#fff;
+    line-height: 2rem;
+    font-size:1.7rem;
+    letter-spacing:0.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.s5-description-left{
+    padding-top:10%;
+    display: none; 
+}
+.s5-description-right{
+    padding-top:10%;
+    display: none;
+}
+.s5-description-left p ,.s5-description-right p{
+    width:60%;
+    padding:20px;
+   transition: all 1s;
+}
+.s5-description-left p:hover ,.s5-description-right p:hover{
+    background-color:rgba(0,0,0,0.5);
+}
+.s5-description h1{
+    font-size:5rem;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.icon{
+    position: absolute;
+    right:5%;
+    bottom:5%;
+    display: none;
+}
+.icon-active{
+    display: block;
+}
+/*フッター*/
+.footer{
+    height: 60px;
+    width: 100%;
+    background-color: #333;
+    color:#fff;
+    padding:0;
+    margin:0;
+}
+.footer p{
+    padding:0;
+    margin:0;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 1rem;
+}
+
+.cover{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:url('../img/tourbillon.jpg') no-repeat;
+    background-size:cover;
+    z-index:99;
+}

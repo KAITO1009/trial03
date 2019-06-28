@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+@media only screen and (max-width:1240px){
+    .site-heading{
+        font-size:3rem;
+        padding-left:2%;
+        width:30%;
+        height: 100%;
+    }
+    .title-font{
+        font-size: 3rem;
+    }
+    .tabs-nav li{
+        font-size:1.5rem;
+    }
+    .tabs-nav li:nth-child(3) a{
+        line-height: 1;
+        padding-top:3.7rem;
+    }
+    #h3 h2{
+        width:60%;
+    }
+    .tabs-inner-description1{
+        background: url('../img/tourbillon.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .headerSectionBody{
+        height: 300px;
+    }
+    .header-heading{
+        font-size: 3rem;
+        padding-left:5%;
+    }
+    .tab-btn3{
+        top:220px;
+        left:200px;
+    }
+    .s1{
+        height: 400px;
+    }
+    .s1-description{
+        height: 100%;
+        width: 100%;
+    }
+    .slideshow-nav a .left ,.slideshow-nav a .right{
+        width:30px;
+        height: 50px;
+        opacity: 0.4;
+        z-index:60;
+        top:87%;
+    }
+    .s2{
+        height:400px;
+        background: url('../img/c1.jpg') no-repeat;
+        background-size:cover;
+        
+    }
+    .s1 h1 , .s2 h1{
+        padding-left:10px;
+    }
+    .s2-description-wrapper{
+        width:90%;
+        height:100%;
+        position:absolute;
+        top:100%;
+        left:5%;
+        font-size:1.2rem;
+        font-weight: bold;
+    }
+    .margin{
+        margin:3%;
+    }
+    .s3-description{
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color: rgba(0,0,0,0.3);
+        padding:0 10px;
+    }
+    .box3{
+        top:0;
+    }
+    .sound-btn{
+        width:50px;
+        height:50px;
+    }
+    .box{
+        left:0;
+        width:100%;
+        height: 100%;
+        padding-left:10px;
+        padding-top:10px;
+    }
+    .moon-more{
+        top:5%;
+        height: 30px;
+        line-height: 30px;
+        width:150px;
+    }
+    .moon-more-ride{
+        display:none;
+    }
+    .s5{
+        height: 400px;
+    }
+    .s5-description h1{
+        font-size:2rem;
+        line-height: 3rem;
+        position: absolute;
+        top:0;
+        left:10px;
+    }
+    .s5-description-left p,.s5-description-right p{
+        background-color:rgba(0,0,0,0.5);
+    }
+
+    .rwd-hidden{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width:420px){
+    .site-heading{
+        font-size:1.5rem;
+        padding-left:2%;
+        width:20%;
+        height: 100%;
+    }
+    .tabs-nav{
+        width:80%;
+    }
+    .title-font{
+        font-size: 3rem;
+    }
+    .tabs-nav li{
+        font-size:1rem;
+    }
+    .tabs-inner-description1{
+        background: url('../img/tourbillon.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .headerSectionBody{
+        height: 300px;
+    }
+    .header-heading{
+        font-size: 3rem;
+        padding-left:5%;
+    }
+    .tab-btn3{
+        top:220px;
+        left:200px;
+    }
+    .s1{
+        height: 400px;
+    }
+    .s1-description{
+        height: 100%;
+        width: 100%;
+    }
+    .slideshow-nav a .left ,.slideshow-nav a .right{
+        width:30px;
+        height: 50px;
+        opacity: 0.4;
+        z-index:60;
+        top:87%;
+    }
+    .s2{
+        height:400px;
+        background: url('../img/c1.jpg') no-repeat;
+        background-size:cover;
+        
+    }
+    .s1 h1 , .s2 h1{
+        padding-left:10px;
+    }
+    .s2-description-wrapper{
+        width:90%;
+        height:100%;
+        position:absolute;
+        top:100%;
+        left:5%;
+        font-size:1.2rem;
+        font-weight: bold;
+    }
+    .margin{
+        margin:3%;
+    }
+    .s3-description{
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color: rgba(0,0,0,0.3);
+        padding:0 10px;
+    }
+    .box3{
+        top:0;
+    }
+    .sound-btn{
+        width:50px;
+        height:50px;
+        bottom:2%;
+    }
+    .box{
+        left:0;
+        width:100%;
+        height: 100%;
+        padding-left:10px;
+        padding-top:10px;
+    }
+    .moon-more{
+        left:10%;
+        top:5%;
+        height: 30px;
+        line-height: 30px;
+        width:150px;
+    }
+    .moon-more-ride{
+        display:none;
+    }
+    .s5{
+        height: 600px;
+    }
+    .s5-description h1{
+        font-size:2rem;
+        line-height: 3rem;
+        position: absolute;
+        top:0;
+        left:10px;
+    }
+    .s5-description-left p,.s5-description-right p{
+        background-color:rgba(0,0,0,0.5);
+    }
+
+    .rwd-hidden{
+        display: none;
+    }
+
+
+}
